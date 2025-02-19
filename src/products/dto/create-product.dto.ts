@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 
 import { Type } from "class-transformer";
-import { IsBoolean, IsNumber,  IsString, Min } from "class-validator";
+import { IsBoolean, IsNumber,  IsOptional,  IsString, Min } from "class-validator";
 
 export class CreateProductDto {
 
@@ -16,5 +16,6 @@ export class CreateProductDto {
     public price : number;
 
     @IsBoolean()
+    @IsOptional()
     isActive: boolean;
 }
